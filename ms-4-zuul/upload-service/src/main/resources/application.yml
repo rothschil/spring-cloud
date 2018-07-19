@@ -1,0 +1,20 @@
+server:
+  port: 9001
+spring:
+  application:
+    name: upload-service
+  http:
+    multipart:
+      max-file-size: 4096Mb
+      max-request-size: 4096Mb
+
+eureka:
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${server.port}
+  server:
+    port: 8761
+  client:
+    service-url:
+      defaultZone:  http://localhost:${eureka.server.port}/eureka/

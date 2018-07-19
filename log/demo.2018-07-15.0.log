@@ -1,0 +1,10 @@
+2018-07-15 15:10:45,507 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-07-15 15:10:52,983 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-07-15 15:10:53,119 INFO (StartupInfoLogger.java:57)- Started ConfigClientBus4RabbitApplication in 1.442 seconds (JVM running for 17.243)
+2018-07-15 15:11:29,840 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-07-15 15:11:41,267 INFO (EventConfig.java:25)- 订单创建，待支付
+2018-07-15 15:11:41,275 INFO (EventConfig.java:35)- 用户完成支付，待收货: start
+2018-07-15 15:11:41,275 INFO (EventConfig.java:30)- 用户完成支付，待收货
+2018-07-15 15:11:41,280 INFO (EventConfig.java:40)- 用户完成支付，待收货: end
+2018-07-15 15:11:41,281 INFO (EventConfig.java:45)- 用户已收货，订单完成
+2018-07-15 15:11:41,283 INFO (StartupInfoLogger.java:57)- Started ProviderServiceApplication in 13.388 seconds (JVM running for 18.205)

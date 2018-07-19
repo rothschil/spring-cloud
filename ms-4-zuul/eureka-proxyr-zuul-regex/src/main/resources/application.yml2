@@ -1,0 +1,32 @@
+server:
+  port: 10001
+spring:
+  application:
+    name: api-gateway-zuul-regex
+eureka:
+  instance:
+    prefer-ip-address: true
+  server:
+    port: 8761
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:${eureka.server.port}/eureka/
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeout-in-milliseconds: 6000
+ribbon:
+  ConnectTimeout: 6000
+  ReadTimeout: 60000
+#zuul:
+#  prefix: /users
+#  strip-prefix: false
+#logging:
+#  level:
+#    com.netflix: debug
+#security:
+#  basic:
+#    enabled: false

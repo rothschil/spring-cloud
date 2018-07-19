@@ -1,0 +1,14 @@
+2018-07-07 23:56:58,577 INFO (WebLogAspect.java:47)- URL : http://192.168.5.1:9001/users/2
+2018-07-07 23:56:58,581 INFO (WebLogAspect.java:48)- HTTP_METHOD : GET
+2018-07-07 23:56:58,581 INFO (WebLogAspect.java:49)- IP : 192.168.5.1
+2018-07-07 23:56:58,584 INFO (WebLogAspect.java:50)- CLASS_METHOD : xyz.wongs.web.UserController.getUser
+2018-07-07 23:56:58,595 INFO (WebLogAspect.java:51)- ARGS : [2]
+2018-07-07 23:56:58,657 INFO (WebLogAspect.java:69)- RESPONSE : xyz.wongs.domain.User@447dbef3
+2018-07-07 23:56:58,658 INFO (WebLogAspect.java:70)- SPEND TIME : 80
+2018-07-07 23:57:09,416 INFO (WebLogAspect.java:47)- URL : http://192.168.5.1:9001/users/4
+2018-07-07 23:57:09,417 INFO (WebLogAspect.java:48)- HTTP_METHOD : GET
+2018-07-07 23:57:09,422 INFO (WebLogAspect.java:49)- IP : 192.168.5.1
+2018-07-07 23:57:09,422 INFO (WebLogAspect.java:50)- CLASS_METHOD : xyz.wongs.web.UserController.getUser
+2018-07-07 23:57:09,422 INFO (WebLogAspect.java:51)- ARGS : [4]
+2018-07-07 23:57:09,426 INFO (WebLogAspect.java:69)- RESPONSE : xyz.wongs.domain.User@2c26b22b
+2018-07-07 23:57:09,427 INFO (WebLogAspect.java:70)- SPEND TIME : 11

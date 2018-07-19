@@ -1,0 +1,31 @@
+server:
+  port: 9001
+spring:
+  application:
+    name: config-server-rabbit
+  cloud:
+    config:
+      server:
+        git:
+          password: w@ngy0ng
+          username: wcngs@hotmail.com
+          uri: https://github.com/rothschil/repo-test/
+          search-paths: /*
+  rabbitmq:
+    host: localhost
+    username: guest
+    password: guest
+    port: 5672
+eureka:
+  server:
+    port: 8761
+  client:
+    service-url:
+      defaultZone: http://localhost:${eureka.server.port}/eureka/
+  instance:
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${server.port}
+    prefer-ip-address: true
+management:
+  security:
+    enabled: false
+

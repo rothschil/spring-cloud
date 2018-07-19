@@ -1,0 +1,12 @@
+2018-07-15 16:34:12,633 INFO (WebLogAspect.java:47)- URL : http://169.254.130.77:9001/users/2
+2018-07-15 16:34:12,647 INFO (WebLogAspect.java:48)- HTTP_METHOD : GET
+2018-07-15 16:34:12,648 INFO (WebLogAspect.java:49)- IP : 169.254.130.77
+2018-07-15 16:34:12,650 INFO (WebLogAspect.java:50)- CLASS_METHOD : xyz.wongs.web.UserController.getUser
+2018-07-15 16:34:12,650 INFO (WebLogAspect.java:51)- ARGS : [2]
+2018-07-15 16:34:12,723 INFO (WebLogAspect.java:69)- RESPONSE : xyz.wongs.domain.User@2f798d4f
+2018-07-15 16:34:12,723 INFO (WebLogAspect.java:70)- SPEND TIME : 90
+2018-07-15 16:50:22,943 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-07-15 16:50:31,815 INFO (StartupInfoLogger.java:57)- Started ProviderServiceVersionApplication in 10.625 seconds (JVM running for 14.389)
+2018-07-15 16:58:43,435 INFO (WebLogAspect.java:47)- URL : http://169.254.130.77:9001/users/2
+2018-07-15 16:58:43,435 INFO (WebLogAspect.java:48)- HTTP_METHOD : GET
+2018-07-15 16:58:43,435 INFO (WebLogAspect.java:49)- IP : 169.254.130.77

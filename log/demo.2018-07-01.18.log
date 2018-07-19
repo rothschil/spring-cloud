@@ -1,0 +1,38 @@
+2018-07-01 22:18:07,028 INFO (StartupInfoLogger.java:57)- Started HystrixConsumerRibbonApplication in 3.303 seconds (JVM running for 1785.639)
+2018-07-01 22:18:30,563 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-07-01 22:18:39,695 INFO (EventConfig.java:25)- 订单创建，待支付
+2018-07-01 22:18:39,703 INFO (EventConfig.java:35)- 用户完成支付，待收货: start
+2018-07-01 22:18:39,704 INFO (EventConfig.java:30)- 用户完成支付，待收货
+2018-07-01 22:18:39,705 INFO (EventConfig.java:40)- 用户完成支付，待收货: end
+2018-07-01 22:18:39,706 INFO (EventConfig.java:45)- 用户已收货，订单完成
+2018-07-01 22:18:39,707 INFO (StartupInfoLogger.java:57)- Started ProviderServiceApplication in 11.697 seconds (JVM running for 13.111)
+2018-07-01 22:19:11,055 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-07-01 22:19:13,804 INFO (StartupInfoLogger.java:57)- Started HystrixConsumerRibbonApplication in 3.301 seconds (JVM running for 1852.416)
+2018-07-01 22:19:19,125 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-07-01 22:19:22,912 INFO (StartupInfoLogger.java:57)- Started HystrixConsumerRibbonApplication in 4.641 seconds (JVM running for 1861.523)
+2018-07-01 22:19:26,143 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-07-01 22:19:29,035 INFO (StartupInfoLogger.java:57)- Started HystrixConsumerRibbonApplication in 3.778 seconds (JVM running for 1867.647)
+2018-07-01 22:19:55,915 ERROR (UserController.java:98)-  Request: user id is 1
+2018-07-01 22:19:56,103 INFO (WebLogAspect.java:47)- URL : http://192.168.5.1:9001/users/1
+2018-07-01 22:19:56,110 INFO (WebLogAspect.java:48)- HTTP_METHOD : GET
+2018-07-01 22:19:56,110 INFO (WebLogAspect.java:49)- IP : 192.168.5.1
+2018-07-01 22:19:56,113 INFO (WebLogAspect.java:50)- CLASS_METHOD : xyz.wongs.web.UserController.getUser
+2018-07-01 22:19:56,113 INFO (WebLogAspect.java:51)- ARGS : [1]
+2018-07-01 22:19:56,170 INFO (WebLogAspect.java:69)- RESPONSE : xyz.wongs.domain.User@28e03c59
+2018-07-01 22:19:56,170 INFO (WebLogAspect.java:70)- SPEND TIME : 67
+2018-07-01 22:19:57,784 ERROR (UserController.java:98)-  Request: user id is 1
+2018-07-01 22:19:57,790 INFO (WebLogAspect.java:47)- URL : http://192.168.5.1:9001/users/1
+2018-07-01 22:19:57,793 INFO (WebLogAspect.java:48)- HTTP_METHOD : GET
+2018-07-01 22:19:57,797 INFO (WebLogAspect.java:49)- IP : 192.168.5.1
+2018-07-01 22:19:57,798 INFO (WebLogAspect.java:50)- CLASS_METHOD : xyz.wongs.web.UserController.getUser
+2018-07-01 22:19:57,798 INFO (WebLogAspect.java:51)- ARGS : [1]
+2018-07-01 22:19:57,801 INFO (WebLogAspect.java:69)- RESPONSE : xyz.wongs.domain.User@256d624e
+2018-07-01 22:19:57,803 INFO (WebLogAspect.java:70)- SPEND TIME : 13
+2018-07-01 22:19:59,800 ERROR (UserController.java:98)-  Request: user id is 1
+2018-07-01 22:19:59,806 INFO (WebLogAspect.java:47)- URL : http://192.168.5.1:9001/users/1
+2018-07-01 22:19:59,810 INFO (WebLogAspect.java:48)- HTTP_METHOD : GET
+2018-07-01 22:19:59,810 INFO (WebLogAspect.java:49)- IP : 192.168.5.1
+2018-07-01 22:19:59,813 INFO (WebLogAspect.java:50)- CLASS_METHOD : xyz.wongs.web.UserController.getUser
+2018-07-01 22:19:59,813 INFO (WebLogAspect.java:51)- ARGS : [1]
+2018-07-01 22:19:59,817 INFO (WebLogAspect.java:69)- RESPONSE : xyz.wongs.domain.User@a4f8f4a
+2018-07-01 22:19:59,817 INFO (WebLogAspect.java:70)- SPEND TIME : 11

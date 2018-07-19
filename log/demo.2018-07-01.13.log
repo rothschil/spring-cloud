@@ -1,0 +1,9 @@
+2018-07-01 22:07:13,373 ERROR (UserController.java:98)-  Request: user id is 1
+2018-07-01 22:07:21,629 ERROR (UserController.java:98)-  Request: user id is 1
+2018-07-01 22:09:20,363 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-07-01 22:09:22,651 INFO (StartupInfoLogger.java:57)- Started HystrixConsumerRibbonApplication in 3.396 seconds (JVM running for 1261.262)
+2018-07-01 22:11:02,948 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-07-01 22:11:05,382 INFO (StartupInfoLogger.java:57)- Started HystrixConsumerRibbonApplication in 3.266 seconds (JVM running for 1363.994)
+2018-07-01 22:11:14,894 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-07-01 22:11:18,264 INFO (StartupInfoLogger.java:57)- Started HystrixConsumerRibbonApplication in 3.916 seconds (JVM running for 1376.876)
+2018-07-01 22:18:04,333 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default

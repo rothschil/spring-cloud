@@ -1,0 +1,12 @@
+2018-07-15 17:18:26,634 INFO (WebLogAspect.java:69)- RESPONSE : xyz.wongs.domain.User@78f0d4f1
+2018-07-15 17:18:26,636 INFO (WebLogAspect.java:70)- SPEND TIME : 6
+2018-07-15 17:46:31,993 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-07-15 17:46:40,859 INFO (EventConfig.java:25)- 订单创建，待支付
+2018-07-15 17:46:40,859 INFO (EventConfig.java:35)- 用户完成支付，待收货: start
+2018-07-15 17:46:40,859 INFO (EventConfig.java:30)- 用户完成支付，待收货
+2018-07-15 17:46:40,859 INFO (EventConfig.java:40)- 用户完成支付，待收货: end
+2018-07-15 17:46:40,859 INFO (EventConfig.java:45)- 用户已收货，订单完成
+2018-07-15 17:46:40,859 INFO (StartupInfoLogger.java:57)- Started ProviderServiceApplication in 11.142 seconds (JVM running for 13.472)
+2018-07-15 17:51:36,544 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-07-15 17:51:45,718 INFO (EventConfig.java:25)- 订单创建，待支付
+2018-07-15 17:51:45,718 INFO (EventConfig.java:35)- 用户完成支付，待收货: start

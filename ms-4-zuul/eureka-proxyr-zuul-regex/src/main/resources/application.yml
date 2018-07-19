@@ -1,0 +1,26 @@
+server:
+  port: 10001
+spring:
+  application:
+    name: api-gateway-zuul-regex
+eureka:
+  instance:
+    prefer-ip-address: true
+  server:
+    port: 8761
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:${eureka.server.port}/eureka/
+hystrix:
+  command:
+    upload-service:
+      execution:
+#        timeout:
+#          enabled: false
+        isolation:
+          thread:
+            timeoutInMilliseconds: 600000
+ribbon:
+  ConnectTimeout: 3000
+  ReadTimeout: 60000
+  maxAutoRetries: 3

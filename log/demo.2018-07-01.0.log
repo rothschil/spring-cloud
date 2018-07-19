@@ -1,0 +1,12 @@
+2018-07-01 21:25:28,975 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-07-01 21:25:38,748 INFO (EventConfig.java:25)- 订单创建，待支付
+2018-07-01 21:25:38,758 INFO (EventConfig.java:35)- 用户完成支付，待收货: start
+2018-07-01 21:25:38,758 INFO (EventConfig.java:30)- 用户完成支付，待收货
+2018-07-01 21:25:38,760 INFO (EventConfig.java:40)- 用户完成支付，待收货: end
+2018-07-01 21:25:38,762 INFO (EventConfig.java:45)- 用户已收货，订单完成
+2018-07-01 21:25:38,766 INFO (StartupInfoLogger.java:57)- Started ProviderServiceApplication in 11.152 seconds (JVM running for 12.854)
+2018-07-01 21:29:32,714 INFO (WebLogAspect.java:47)- URL : http://192.168.5.1:9001/users/1
+2018-07-01 21:29:32,719 INFO (WebLogAspect.java:48)- HTTP_METHOD : GET
+2018-07-01 21:29:32,719 INFO (WebLogAspect.java:49)- IP : 192.168.5.1
+2018-07-01 21:29:32,785 INFO (WebLogAspect.java:50)- CLASS_METHOD : xyz.wongs.web.UserController.getUser
+2018-07-01 21:29:32,786 INFO (WebLogAspect.java:51)- ARGS : [1]

@@ -1,0 +1,32 @@
+spring:
+  cloud:
+    config:
+      name:  neo-config
+      profile: test
+#      uri:  http://192.168.137.1:9001
+      label: master
+      discovery:
+        enabled: true
+        service-id: config-server-rabbit
+    bus:
+      trace:
+        enabled: true
+  rabbitmq:
+    host: localhost
+    username: guest
+    password: guest
+    port: 5672
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:${eureka.server.port}/eureka/
+  instance:
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${server.port}
+    prefer-ip-address: true
+  server:
+    port: 8761
+management:
+  security:
+    enabled: false

@@ -1,0 +1,11 @@
+2018-07-15 17:51:45,718 INFO (EventConfig.java:30)- 用户完成支付，待收货
+2018-07-15 17:51:45,734 INFO (EventConfig.java:40)- 用户完成支付，待收货: end
+2018-07-15 17:51:45,734 INFO (EventConfig.java:45)- 用户已收货，订单完成
+2018-07-15 17:51:45,734 INFO (StartupInfoLogger.java:57)- Started ProviderServiceApplication in 12.638 seconds (JVM running for 14.49)
+2018-07-15 17:53:16,166 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-07-15 17:53:25,006 INFO (EventConfig.java:25)- 订单创建，待支付
+2018-07-15 17:53:25,006 INFO (EventConfig.java:35)- 用户完成支付，待收货: start
+2018-07-15 17:53:25,006 INFO (EventConfig.java:30)- 用户完成支付，待收货
+2018-07-15 17:53:25,006 INFO (EventConfig.java:40)- 用户完成支付，待收货: end
+2018-07-15 17:53:25,006 INFO (EventConfig.java:45)- 用户已收货，订单完成
+2018-07-15 17:53:25,021 INFO (StartupInfoLogger.java:57)- Started ProviderServiceApplication in 11.122 seconds (JVM running for 13.614)

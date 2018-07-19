@@ -1,0 +1,16 @@
+2018-07-15 16:29:35,050 INFO (WebLogAspect.java:70)- SPEND TIME : 6
+2018-07-15 16:29:35,917 INFO (WebLogAspect.java:47)- URL : http://169.254.130.77:9001/users/2
+2018-07-15 16:29:35,918 INFO (WebLogAspect.java:48)- HTTP_METHOD : GET
+2018-07-15 16:29:35,918 INFO (WebLogAspect.java:49)- IP : 169.254.130.77
+2018-07-15 16:29:35,918 INFO (WebLogAspect.java:50)- CLASS_METHOD : xyz.wongs.web.UserController.getUser
+2018-07-15 16:29:35,919 INFO (WebLogAspect.java:51)- ARGS : [2]
+2018-07-15 16:29:35,921 INFO (WebLogAspect.java:69)- RESPONSE : xyz.wongs.domain.User@3ac7605b
+2018-07-15 16:29:35,922 INFO (WebLogAspect.java:70)- SPEND TIME : 5
+2018-07-15 16:29:36,776 INFO (WebLogAspect.java:47)- URL : http://169.254.130.77:9001/users/2
+2018-07-15 16:29:36,832 INFO (WebLogAspect.java:48)- HTTP_METHOD : GET
+2018-07-15 16:29:36,832 INFO (WebLogAspect.java:49)- IP : 169.254.130.77
+2018-07-15 16:29:36,833 INFO (WebLogAspect.java:50)- CLASS_METHOD : xyz.wongs.web.UserController.getUser
+2018-07-15 16:29:36,833 INFO (WebLogAspect.java:51)- ARGS : [2]
+2018-07-15 16:29:36,837 INFO (WebLogAspect.java:69)- RESPONSE : xyz.wongs.domain.User@249eb946
+2018-07-15 16:29:36,837 INFO (WebLogAspect.java:70)- SPEND TIME : 61
+2018-07-15 16:30:17,767 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default

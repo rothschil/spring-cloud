@@ -1,0 +1,13 @@
+2018-07-15 16:15:08,801 INFO (EventConfig.java:25)- 订单创建，待支付
+2018-07-15 16:15:08,816 INFO (EventConfig.java:35)- 用户完成支付，待收货: start
+2018-07-15 16:15:08,817 INFO (EventConfig.java:30)- 用户完成支付，待收货
+2018-07-15 16:15:08,818 INFO (EventConfig.java:40)- 用户完成支付，待收货: end
+2018-07-15 16:15:08,819 INFO (EventConfig.java:45)- 用户已收货，订单完成
+2018-07-15 16:15:08,821 INFO (StartupInfoLogger.java:57)- Started ProviderServiceVersionApplication in 10.002 seconds (JVM running for 13.246)
+2018-07-15 16:16:24,996 INFO (WebLogAspect.java:47)- URL : http://169.254.130.77:9001/users/1
+2018-07-15 16:16:24,996 INFO (WebLogAspect.java:48)- HTTP_METHOD : GET
+2018-07-15 16:16:24,999 INFO (WebLogAspect.java:49)- IP : 169.254.130.77
+2018-07-15 16:16:25,001 INFO (WebLogAspect.java:50)- CLASS_METHOD : xyz.wongs.web.UserController.getUser
+2018-07-15 16:16:25,002 INFO (WebLogAspect.java:51)- ARGS : [1]
+2018-07-15 16:16:25,059 INFO (WebLogAspect.java:69)- RESPONSE : xyz.wongs.domain.User@4a068f18
+2018-07-15 16:16:25,060 INFO (WebLogAspect.java:70)- SPEND TIME : 64

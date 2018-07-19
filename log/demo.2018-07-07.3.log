@@ -1,0 +1,10 @@
+2018-07-07 22:32:51,839 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-07-07 22:33:07,058 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-07-07 22:33:07,199 INFO (StartupInfoLogger.java:57)- Started ConfigClientBus4RabbitApplication in 2.889 seconds (JVM running for 28.097)
+2018-07-07 22:33:07,621 INFO (StartupInfoLogger.java:57)- Started ConfigClientBus4RabbitApplication in 24.142 seconds (JVM running for 28.519)
+2018-07-07 22:34:02,008 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-07-07 22:34:15,793 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-07-07 22:34:15,947 INFO (StartupInfoLogger.java:57)- Started ConfigClientBus4RabbitApplication in 6.364 seconds (JVM running for 25.098)
+2018-07-07 22:34:16,476 INFO (StartupInfoLogger.java:57)- Started ConfigClientBus4RabbitApplication in 21.717 seconds (JVM running for 25.622)
+2018-07-07 22:54:17,009 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-07-07 22:55:00,601 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default

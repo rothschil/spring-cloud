@@ -1,0 +1,19 @@
+2018-07-01 23:57:36,468 INFO (StartupInfoLogger.java:57)- Started HystrixConsumerFeignApplication in 4.09 seconds (JVM running for 629.497)
+2018-07-01 23:57:53,221 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-07-01 23:57:55,494 INFO (StartupInfoLogger.java:57)- Started HystrixConsumerFeignApplication in 2.814 seconds (JVM running for 648.523)
+2018-07-02 09:09:37,598 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-07-02 09:09:54,142 INFO (EventConfig.java:25)- 订单创建，待支付
+2018-07-02 09:09:54,151 INFO (EventConfig.java:35)- 用户完成支付，待收货: start
+2018-07-02 09:09:54,152 INFO (EventConfig.java:30)- 用户完成支付，待收货
+2018-07-02 09:09:54,154 INFO (EventConfig.java:40)- 用户完成支付，待收货: end
+2018-07-02 09:09:54,155 INFO (EventConfig.java:45)- 用户已收货，订单完成
+2018-07-02 09:09:54,157 INFO (StartupInfoLogger.java:57)- Started ProviderServiceApplication in 17.984 seconds (JVM running for 22.013)
+2018-07-02 09:14:35,364 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-07-02 09:14:41,106 INFO (StartupInfoLogger.java:57)- Started HystrixConsumerFeignApplication in 7.154 seconds (JVM running for 9.073)
+2018-07-02 09:15:14,464 INFO (WebLogAspect.java:47)- URL : http://134.98.100.65:9001/users/4
+2018-07-02 09:15:14,470 INFO (WebLogAspect.java:48)- HTTP_METHOD : GET
+2018-07-02 09:15:14,470 INFO (WebLogAspect.java:49)- IP : 134.98.100.65
+2018-07-02 09:15:14,487 INFO (WebLogAspect.java:50)- CLASS_METHOD : xyz.wongs.web.UserController.getUser
+2018-07-02 09:15:14,487 INFO (WebLogAspect.java:51)- ARGS : [4]
+2018-07-02 09:15:14,580 INFO (WebLogAspect.java:69)- RESPONSE : xyz.wongs.domain.User@216f47d4
+2018-07-02 09:15:14,581 INFO (WebLogAspect.java:70)- SPEND TIME : 117

@@ -1,0 +1,14 @@
+2018-06-30 12:30:42,169 INFO (WebLogAspect.java:47)- URL : http://192.168.5.1:9001/users/list-all
+2018-06-30 12:30:42,174 INFO (WebLogAspect.java:48)- HTTP_METHOD : GET
+2018-06-30 12:30:42,174 INFO (WebLogAspect.java:49)- IP : 192.168.5.1
+2018-06-30 12:30:42,174 INFO (WebLogAspect.java:50)- CLASS_METHOD : xyz.wongs.web.UserController.initDatas
+2018-06-30 12:30:42,175 INFO (WebLogAspect.java:51)- ARGS : []
+2018-06-30 12:30:42,361 INFO (WebLogAspect.java:69)- RESPONSE : null
+2018-06-30 12:30:42,361 INFO (WebLogAspect.java:70)- SPEND TIME : 192
+2018-06-30 12:30:46,823 INFO (WebLogAspect.java:47)- URL : http://192.168.5.1:9001/users/list-all
+2018-06-30 12:30:46,823 INFO (WebLogAspect.java:48)- HTTP_METHOD : GET
+2018-06-30 12:30:46,824 INFO (WebLogAspect.java:49)- IP : 192.168.5.1
+2018-06-30 12:30:46,825 INFO (WebLogAspect.java:50)- CLASS_METHOD : xyz.wongs.web.UserController.initDatas
+2018-06-30 12:30:46,825 INFO (WebLogAspect.java:51)- ARGS : []
+2018-06-30 12:30:46,921 INFO (WebLogAspect.java:69)- RESPONSE : null
+2018-06-30 12:30:46,921 INFO (WebLogAspect.java:70)- SPEND TIME : 98

@@ -1,0 +1,43 @@
+server:
+  port: 10002
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/springboot
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+        hbm2ddl:
+          auto: update
+        show_sql: true
+  redis:
+    host: localhost
+    port: 6379
+    pool:
+      min-idle: 0
+      max-idle: 8
+      max-active: 8
+      max-wait: -1
+  application:
+    name: high-availability-provider-service
+
+flyway:
+  baselineOnMigrate: true
+  locations: classpath:/db
+eureka:
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${server.port}
+  server:
+    port: 8761
+  client:
+    service-url:
+      defaultZone:  http://localhost:${eureka.server.port}/eureka/
+
+
+
+
