@@ -34,7 +34,6 @@ import java.util.List;
 @Transactional(readOnly = true,rollbackFor = NullService.class)
 public class LocationService extends BaseService<Location, Long> {
 
-	@Autowired
 	private LocationRepository locationRepository;
 
 	public List<Location> getLocationBySupLocalCode(String supLocalCode) {
