@@ -19,12 +19,7 @@ spring:
     filters: stat,wall,log4j
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
     useGlobalDataSourceStat: true
-  thymeleaf:
-    mode: HTML5
-    encoding: UTF-8
-    content-type: text/html
-    #开发时关闭缓存,不然没法看到实时页面
-    cache: false
+
   jpa:
     show-sql: false
     hibernate:

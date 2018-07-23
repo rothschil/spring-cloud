@@ -22,7 +22,7 @@ spring:
       max-active: 8
       max-wait: -1
   application:
-    name: provider_service
+    name: provider-service
 
 flyway:
   baselineOnMigrate: true
@@ -32,7 +32,7 @@ eureka:
     hostname: localhost
     prefer-ip-address: true
     instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${server.port}
-    appname: provider_service
+    appname: provider-service
     lease-expiration-duration-in-seconds: 30
     lease-renewal-interval-in-seconds: 10
   server:

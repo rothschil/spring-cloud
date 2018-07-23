@@ -6,6 +6,8 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import xyz.wongs.basic.common.exception.NoIpAddressException;
@@ -27,6 +29,7 @@ import java.util.*;
  **/
 @Component("ipAddressTask")
 public class IpAddressTask {
+    private final static Logger logger = LoggerFactory.getLogger(IpAddressTask.class);
 
     @Autowired
     private IpAddressService ipAddressService;
@@ -37,7 +40,7 @@ public class IpAddressTask {
         if(null== obj) {
             List<IpAddress> ipAddresses = (List<IpAddress>)result.get(ZoneCodeStringUtils.RESULT_KEY);
             for (IpAddress ip:ipAddresses){
-                ipAddressService.save(ip);
+                ipAddressService.save(ip).toString();
             }
         } else {
             //根据异常情况 在做处理，例如链接超时类，就要不断换IP.....待补充

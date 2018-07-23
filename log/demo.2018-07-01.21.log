@@ -1,8 +1,0 @@
-2018-07-01 23:54:08,619 INFO (StartupInfoLogger.java:57)- Started HystrixConsumerFeignApplication in 4.442 seconds (JVM running for 421.647)
-2018-07-01 23:54:25,462 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
-2018-07-01 23:54:27,989 INFO (StartupInfoLogger.java:57)- Started HystrixConsumerFeignApplication in 3.111 seconds (JVM running for 441.017)
-2018-07-01 23:56:14,892 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
-2018-07-01 23:56:17,039 INFO (StartupInfoLogger.java:57)- Started HystrixConsumerFeignApplication in 2.846 seconds (JVM running for 550.068)
-2018-07-01 23:56:24,504 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
-2018-07-01 23:56:26,639 INFO (StartupInfoLogger.java:57)- Started HystrixConsumerFeignApplication in 3.224 seconds (JVM running for 559.668)
-2018-07-01 23:57:33,561 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default

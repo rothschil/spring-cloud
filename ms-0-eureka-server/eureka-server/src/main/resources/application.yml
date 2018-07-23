@@ -1,8 +1,8 @@
 server:
-  port: 8761
+  port: 8761              #指定应用端口
 spring:
   application:
-    name: eureka-server
+    name: eureka-server   #指定应用端口
 eureka:
   environment: product
   datacenter: wongs
@@ -16,5 +16,5 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:${server.port}/eureka/
-    fetch-registry: false
-    register-with-eureka: false
+    fetch-registry: false             #抓取注
+    register-with-eureka: false       #是否注册Eureka中心

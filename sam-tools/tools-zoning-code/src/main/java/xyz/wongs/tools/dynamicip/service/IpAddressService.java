@@ -1,5 +1,7 @@
 package xyz.wongs.tools.dynamicip.service;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.domain.Page;
@@ -35,7 +37,8 @@ import java.util.List;
 @Transactional(readOnly = true,rollbackFor = NullService.class)
 public class IpAddressService extends BaseService<IpAddress, Long> {
 
-    @Autowired
+    private final static Logger logger = LoggerFactory.getLogger(IpAddressService.class);
+
     private IpAddressRepository ipAddressRepository;
 
     public IpAddressService() {
@@ -52,8 +55,10 @@ public class IpAddressService extends BaseService<IpAddress, Long> {
     }
 
 
+
+//    @Transactional(rollbackFor = Exception.class)
     @Override
-    @Transactional(rollbackFor = Exception.class)
+    @Transactional
     public IpAddress save(IpAddress ipAddress) {
         return super.save(ipAddress);
     }
@@ -80,10 +85,7 @@ public class IpAddressService extends BaseService<IpAddress, Long> {
     }
 
 
-    @Override
-    public Page<IpAddress> findEntityCriteria2(Integer page, Integer size, IpAddress ipAddress){
-        return super.findEntityCriteria2(page,size,ipAddress);
-    }
+
 
     @Transactional(rollbackFor = Exception.class)
     public void updateWeights(IpAddress ipAddress){

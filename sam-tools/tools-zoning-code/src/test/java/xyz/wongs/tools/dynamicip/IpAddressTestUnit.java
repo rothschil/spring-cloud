@@ -4,9 +4,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.data.domain.Page;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.transaction.annotation.Transactional;
 import xyz.wongs.ZoneCodeApplication;
 import xyz.wongs.tools.dynamicip.entity.IpAddress;
 import xyz.wongs.tools.dynamicip.service.IpAddressService;
@@ -63,19 +61,7 @@ public class IpAddressTestUnit {
         }
     }
 
-    @Transactional(readOnly = true)
-    @Test
-    public void testFindPageByTraget(){
-        IpAddress ipAddress = new IpAddress();
-        ipAddress.setNation("韩国");
-        ipAddress.setType("https");
-//        Page<IpAddress> ipAddressPage = ipAddressService.findEntityCriteria(1,2,ipAddress);
-        Page<IpAddress> ipAddressPage = ipAddressService.findEntityCriteria2(1,2,ipAddress);
-        List<IpAddress> ipAddressList = ipAddressPage.getContent();
-        for (IpAddress ia:ipAddressList){
-            System.out.println(ia.toString());
-        }
-    }
+
 
 
 }

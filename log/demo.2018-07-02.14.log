@@ -1,6 +1,0 @@
-2018-07-02 10:03:39,192 INFO (EventConfig.java:25)- 订单创建，待支付
-2018-07-02 10:03:39,197 INFO (EventConfig.java:35)- 用户完成支付，待收货: start
-2018-07-02 10:03:39,198 INFO (EventConfig.java:30)- 用户完成支付，待收货
-2018-07-02 10:03:39,199 INFO (EventConfig.java:40)- 用户完成支付，待收货: end
-2018-07-02 10:03:39,199 INFO (EventConfig.java:45)- 用户已收货，订单完成
-2018-07-02 10:03:39,201 INFO (StartupInfoLogger.java:57)- Started ProviderServiceApplication in 4.335 seconds (JVM running for 3247.057)

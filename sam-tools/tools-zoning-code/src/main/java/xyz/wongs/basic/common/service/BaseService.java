@@ -2,23 +2,14 @@ package xyz.wongs.basic.common.service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
-import org.springframework.data.jpa.domain.Specification;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.support.SimpleJpaRepository;
 import xyz.wongs.basic.common.entity.AbstractEntity;
-import xyz.wongs.tools.utils.MethodUtil;
 
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Predicate;
-import javax.persistence.criteria.Root;
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -38,9 +29,6 @@ public abstract class BaseService<T extends AbstractEntity<?>, ID extends Serial
 
 	protected JpaRepository<T, ID> jpaRepository;
 
-
-    @Autowired(required = false)
-	protected SimpleJpaRepository simpleJpaRepository;
 
     public BaseService() {
 	}
@@ -160,30 +148,6 @@ public abstract class BaseService<T extends AbstractEntity<?>, ID extends Serial
         return jpaRepository.findAll(sort);
     }
 
-
-    public Page<T> findEntityCriteria2(Integer page, Integer size, T t) {
-        // TODO Auto-generated method stub
-        Pageable pageable = new PageRequest(page, size);
-        try {
-            return simpleJpaRepository.findAll(new Specification<T>(){
-                @Override
-                public Predicate toPredicate(Root<T> root, CriteriaQuery<?> query, CriteriaBuilder cb) {
-                    // TODO Auto-generated method stub
-                    List<Predicate> lp = new ArrayList<Predicate>();
-                    MethodUtil.getFieldValue(t,root,cb,lp);
-                    Predicate[] pe = new Predicate[lp.size()];
-                    query.where(cb.and(lp.toArray(pe)));
-                    return query.getRestriction();
-                }
-
-            }, pageable);
-        } catch (Exception e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-
-        return null;
-    }
 
     /**
      * 分页及排序查询实体

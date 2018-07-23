@@ -1,4 +1,0 @@
-2018-07-06 23:32:02,137 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
-2018-07-06 23:32:04,047 INFO (StartupInfoLogger.java:57)- Started ConfigClientApplication in 5.978 seconds (JVM running for 743.64)
-2018-07-06 23:36:48,456 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
-2018-07-06 23:36:50,171 INFO (StartupInfoLogger.java:57)- Started ConfigClientApplication in 10.982 seconds (JVM running for 1029.763)
