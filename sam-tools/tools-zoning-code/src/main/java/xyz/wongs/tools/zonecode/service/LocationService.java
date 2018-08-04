@@ -66,7 +66,7 @@ public class LocationService extends BaseService<Location, Long> {
 
 	public Page<Location> getLocationsByLevel(Integer lv,int pageNumber){
 		//每页大小
-		int pageSize=100;
+		int pageSize=20;
 		Sort sort = new Sort(Sort.Direction.DESC, "id");
 		Pageable pageable = new PageRequest(pageNumber,pageSize,sort);
 		return locationRepository.getLocationsByLevel(lv,pageable);
@@ -74,7 +74,7 @@ public class LocationService extends BaseService<Location, Long> {
 
 	public int getLocationCountsByLevel(Integer lv){
 		//每页大小
-		int pageSize=10;
+		int pageSize=20;
 		int size = locationRepository.getLocationCountsByLevel(lv).intValue();
 		if(size%pageSize!=0) {
 		   return  (size/pageSize)+1;

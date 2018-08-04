@@ -1,7 +1,9 @@
-package xyz.wongs.tools.zonecode.service.task;
+package xyz.wongs.tools.zonecode.core.area.service.task;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -22,7 +24,7 @@ import java.util.Random;
 @SpringBootTest(classes ={ZoneCodeApplication.class})
 public class ProcessServiceImplTest {
     private static final String url = "http://www.stats.gov.cn/tjsj/tjbz/tjyqhdmhcxhfdm/2017/";
-
+    private final static Logger logger = LoggerFactory.getLogger(ProcessServiceImplTest.class);
 
     @Autowired
     @Qualifier("processService")
@@ -46,8 +48,11 @@ public class ProcessServiceImplTest {
     public void initSecondLevelResolve() throws Exception {
         int totalPages = locationService.getLocationCountsByLevel(1);
 
-        for (int i = 1; i <= totalPages; i++) {
+        logger.error("Total Pages is "+ totalPages);
+        for (int i = 0; i <= totalPages; i++) {
+            logger.error(" Running page is  "+i+" Begin");
             secondLevelResolve(i);
+            logger.error(" Running page is  "+i+ " End");
         }
     }
 
@@ -63,7 +68,7 @@ public class ProcessServiceImplTest {
             locationService.updateLocationFlag("Y",location.getId());
         }
 
-        int times = new Random().nextInt(10000);
+        int times = new Random().nextInt(5000);
         Thread.sleep(times);
     }
 
@@ -72,12 +77,14 @@ public class ProcessServiceImplTest {
     public void intiThridLevelResolve(){
 
         int totalPages = locationService.getLocationCountsByLevel(2);
-        int f = 1;
-        for (int i = 1; i <= totalPages; i++) {
+        logger.error("Total Pages is "+ totalPages);
+        int f = 0;
+        for (int i = 0; i <= totalPages; i++) {
             f++;
+            logger.error(" Running page is  "+i+" Begin");
             thridLevelResolve("c",i);
-
-            if(f==10){
+            logger.error(" Running page is  "+i+ " End");
+            if(f==27){
                break;
             }
         }

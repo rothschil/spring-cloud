@@ -42,4 +42,6 @@ public interface IpAddressRepository extends BaseRepository<IpAddress, Long>,Jpa
     Page<IpAddress> findByType(@Param("type") String type, Pageable pageable);
 
     List<IpAddress> findByStatusIsNull(@Param("status") String status);
+
+    List<IpAddress> findByNation(@Param("nation") String nation);
 }

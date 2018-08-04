@@ -10,6 +10,7 @@ import xyz.wongs.tools.dynamicip.entity.IpAddress;
 import xyz.wongs.tools.dynamicip.service.IpAddressService;
 import xyz.wongs.tools.dynamicip.task.IpAddressTask;
 import xyz.wongs.tools.dynamicip.task.PingIpAddressTask;
+import xyz.wongs.tools.zonecode.entity.Location;
 
 import java.util.List;
 
@@ -51,6 +52,15 @@ public class IpAddressTestUnit {
         testIpAddressByUrl();
         pingIpAddressTask.pingIpAddress();
     }
+
+    @Test
+    public void testIpAddressByNation() {
+        List<IpAddress> lis = ipAddressService.findByNation("德国");
+        for(IpAddress ia:lis){
+            System.out.println(ia.toString());
+        }
+    }
+
 
     @Test
     public void testGetCount(){

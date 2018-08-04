@@ -38,9 +38,9 @@ public interface LocationRepository extends BaseRepository<Location, Long>,JpaSp
 			" from tb_location t where t.lv=?1 and t.flag is null and rownum<?2",nativeQuery = true)
 	List<Location> findLocationThrid(Integer lv, Integer rownum);
 
-	@Query(value = " FROM Location b where b.flag is null and b.lv=:lv")
+	@Query(value = " FROM Location b where b.url is not null and b.flag is null and b.lv=:lv")
 	Page<Location> getLocationsByLevel(@Param("lv") Integer lv, Pageable pageable);
 
-	@Query(value="select count(*) from Location t where t.flag is null AND t.lv = :lv ")
+	@Query(value="select count(*) from Location t where t.flag is null AND t.lv = :lv and t.url is not null")
 	Long getLocationCountsByLevel(@Param("lv") Integer lv);
 }

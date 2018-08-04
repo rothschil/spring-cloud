@@ -10,6 +10,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import xyz.wongs.basic.common.exception.NullService;
@@ -127,6 +128,11 @@ public class IpAddressService extends BaseService<IpAddress, Long> {
         }
 
         return null;
+    }
+
+
+    public List<IpAddress> findByNation(String nation){
+         return ipAddressRepository.findByNation(nation);
     }
 
     public Page<IpAddress> findIpAddress(int pageNumber,String type,Sort sort) {
