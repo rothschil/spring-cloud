@@ -76,16 +76,47 @@ public class ProcessServiceImplTest {
     @Test
     public void intiThridLevelResolve(){
 
-        int totalPages = locationService.getLocationCountsByLevel(2);
+        intiLevelResolve(2,"d");
+    }
+
+
+
+
+    @Test
+    public void intiFourthLevelResolve(){
+
+        intiLevelResolve(3,"d");
+    }
+
+    public void intiLevelResolve(int level,String flag){
+
+        int totalPages = locationService.getLocationCountsByLevel(level);
         logger.error("Total Pages is "+ totalPages);
         int f = 0;
         for (int i = 0; i <= totalPages; i++) {
             f++;
             logger.error(" Running page is  "+i+" Begin");
-            thridLevelResolve("c",i);
+            thridLevelResolve(flag,i);
             logger.error(" Running page is  "+i+ " End");
             if(f==27){
-               break;
+                break;
+            }
+        }
+    }
+
+    public void fourthLevelResolve(String flag,int pageNumber){
+        Page<Location> pageLocation = locationService.getLocationsByLevel(3, pageNumber);
+
+        Iterator<Location> iter = pageLocation.iterator();
+        while (iter.hasNext()) {
+            Location location = iter.next();
+            String url2 = new StringBuilder().append(url).append(ZoneCodeStringUtils.getUrlStrByLocationCode(location.getLocalCode(), 2)).append(location.getUrl()).toString();
+            processService.thridLevelResolve(url2, location, flag);
+            try {
+                int times = new Random().nextInt(2000);
+                Thread.sleep(times);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
         }
     }
