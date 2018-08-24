@@ -21,7 +21,6 @@ import org.springframework.web.client.RestTemplate;
 @EnableCircuitBreaker
 public class HystrixConsumerRibbonApplication {
 
-
     @Bean
     @LoadBalanced
     RestTemplate restTemplate(){

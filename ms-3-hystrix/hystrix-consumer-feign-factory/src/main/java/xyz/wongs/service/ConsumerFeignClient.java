@@ -18,27 +18,14 @@ import java.util.List;
 @FeignClient(name = "PROVIDER-SERVICE",configuration = {ProviderServiceConfiguration.class},fallbackFactory = ConsumerFeignClientFallbackFactory.class)
 public interface ConsumerFeignClient {
 
-    /**
-     * 方法实现说明
-     * @method
-     * @author      WCNGS@QQ.COM
-     * @version
-     * @see
-     * @param
-     * @return
-     * @exception
-     * @date        2018/6/27 21:31
-     */
     @RequestMapping(value = "/users/",method = RequestMethod.GET)
     List<User> getUserList();
-
 
     @RequestMapping(value="/users/", method=RequestMethod.POST)
     String postUser(@RequestBody User user);
 
     @RequestMapping(value="/users/{id}", method=RequestMethod.GET)
     User getUser(@PathVariable("id") Long id);
-
 
     @RequestMapping(value="/users/{id}", method=RequestMethod.PUT)
     String putUser(@PathVariable("id") Long id, @ModelAttribute User user);

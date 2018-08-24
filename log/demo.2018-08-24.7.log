@@ -1,0 +1,136 @@
+2018-08-24 09:52:49,674 INFO (EventConfig.java:25)- 订单创建，待支付
+2018-08-24 09:52:49,689 INFO (EventConfig.java:35)- 用户完成支付，待收货: start
+2018-08-24 09:52:49,690 INFO (EventConfig.java:30)- 用户完成支付，待收货
+2018-08-24 09:52:49,692 INFO (EventConfig.java:40)- 用户完成支付，待收货: end
+2018-08-24 09:52:49,693 INFO (EventConfig.java:45)- 用户已收货，订单完成
+2018-08-24 09:52:49,695 INFO (StartupInfoLogger.java:57)- Started ZipkinConsumerApplication in 23.159 seconds (JVM running for 24.471)
+2018-08-24 09:53:01,127 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-08-24 09:53:12,280 INFO (StartupInfoLogger.java:57)- Started ZipkinProviderApplication in 15.219 seconds (JVM running for 17.229)
+2018-08-24 09:54:08,161 INFO (WebLogAspect.java:47)- URL : http://192.168.137.1:9002/users/
+2018-08-24 09:54:08,164 INFO (WebLogAspect.java:48)- HTTP_METHOD : GET
+2018-08-24 09:54:08,285 INFO (WebLogAspect.java:49)- IP : 192.168.137.1
+2018-08-24 09:54:08,298 INFO (WebLogAspect.java:50)- CLASS_METHOD : xyz.wongs.web.UserController.getUserList
+2018-08-24 09:54:08,298 INFO (WebLogAspect.java:51)- ARGS : []
+2018-08-24 09:54:08,657 INFO (WebLogAspect.java:69)- RESPONSE : [xyz.wongs.domain.User@3d795742, xyz.wongs.domain.User@5924950d, xyz.wongs.domain.User@5d63fa9a, xyz.wongs.domain.User@5366cd14, xyz.wongs.domain.User@ed2530, xyz.wongs.domain.User@7d9c54dd, xyz.wongs.domain.User@3f69d6de, xyz.wongs.domain.User@5a02a24a]
+2018-08-24 09:54:08,658 INFO (WebLogAspect.java:70)- SPEND TIME : 497
+2018-08-24 09:55:08,924 INFO (WebLogAspect.java:47)- URL : http://192.168.137.1:9002/users/
+2018-08-24 09:55:08,933 INFO (WebLogAspect.java:48)- HTTP_METHOD : GET
+2018-08-24 09:55:08,939 INFO (WebLogAspect.java:49)- IP : 192.168.137.1
+2018-08-24 09:55:08,939 INFO (WebLogAspect.java:50)- CLASS_METHOD : xyz.wongs.web.UserController.getUserList
+2018-08-24 09:55:08,939 INFO (WebLogAspect.java:51)- ARGS : []
+2018-08-24 09:55:08,944 INFO (WebLogAspect.java:69)- RESPONSE : [xyz.wongs.domain.User@5434df6b, xyz.wongs.domain.User@7a8dd92b, xyz.wongs.domain.User@1ba1af00, xyz.wongs.domain.User@7177a827, xyz.wongs.domain.User@34afee5, xyz.wongs.domain.User@179a3b26, xyz.wongs.domain.User@4daff9f7, xyz.wongs.domain.User@19469b71]
+2018-08-24 09:55:08,947 INFO (WebLogAspect.java:70)- SPEND TIME : 23
+2018-08-24 09:55:10,295 INFO (WebLogAspect.java:47)- URL : http://192.168.137.1:9002/users/
+2018-08-24 09:55:10,298 INFO (WebLogAspect.java:48)- HTTP_METHOD : GET
+2018-08-24 09:55:10,299 INFO (WebLogAspect.java:49)- IP : 192.168.137.1
+2018-08-24 09:55:10,301 INFO (WebLogAspect.java:50)- CLASS_METHOD : xyz.wongs.web.UserController.getUserList
+2018-08-24 09:55:10,301 INFO (WebLogAspect.java:51)- ARGS : []
+2018-08-24 09:55:10,305 INFO (WebLogAspect.java:69)- RESPONSE : [xyz.wongs.domain.User@7ac086c7, xyz.wongs.domain.User@6bb054fa, xyz.wongs.domain.User@2b6e94ba, xyz.wongs.domain.User@67428e4b, xyz.wongs.domain.User@19cadada, xyz.wongs.domain.User@70b45a9d, xyz.wongs.domain.User@2f20cb75, xyz.wongs.domain.User@5ce3380c]
+2018-08-24 09:55:10,306 INFO (WebLogAspect.java:70)- SPEND TIME : 11
+2018-08-24 09:55:10,979 INFO (WebLogAspect.java:47)- URL : http://192.168.137.1:9002/users/
+2018-08-24 09:55:10,979 INFO (WebLogAspect.java:48)- HTTP_METHOD : GET
+2018-08-24 09:55:10,979 INFO (WebLogAspect.java:49)- IP : 192.168.137.1
+2018-08-24 09:55:10,980 INFO (WebLogAspect.java:50)- CLASS_METHOD : xyz.wongs.web.UserController.getUserList
+2018-08-24 09:55:10,983 INFO (WebLogAspect.java:51)- ARGS : []
+2018-08-24 09:55:10,988 INFO (WebLogAspect.java:69)- RESPONSE : [xyz.wongs.domain.User@7df3e45c, xyz.wongs.domain.User@491a8b1e, xyz.wongs.domain.User@2c5ad544, xyz.wongs.domain.User@2df27226, xyz.wongs.domain.User@4fc1a2c0, xyz.wongs.domain.User@521e825d, xyz.wongs.domain.User@28148daf, xyz.wongs.domain.User@16c9b9c9]
+2018-08-24 09:55:10,988 INFO (WebLogAspect.java:70)- SPEND TIME : 9
+2018-08-24 09:55:43,716 INFO (WebLogAspect.java:47)- URL : http://192.168.137.1:9002/users/
+2018-08-24 09:55:43,719 INFO (WebLogAspect.java:48)- HTTP_METHOD : GET
+2018-08-24 09:55:43,719 INFO (WebLogAspect.java:49)- IP : 192.168.137.1
+2018-08-24 09:55:43,723 INFO (WebLogAspect.java:50)- CLASS_METHOD : xyz.wongs.web.UserController.getUserList
+2018-08-24 09:55:43,723 INFO (WebLogAspect.java:51)- ARGS : []
+2018-08-24 09:55:43,731 INFO (WebLogAspect.java:69)- RESPONSE : [xyz.wongs.domain.User@5576ce3b, xyz.wongs.domain.User@6a2d45d6, xyz.wongs.domain.User@5fae44aa, xyz.wongs.domain.User@325c608a, xyz.wongs.domain.User@513877ec, xyz.wongs.domain.User@513b8be8, xyz.wongs.domain.User@7c1d1e71, xyz.wongs.domain.User@2d946948]
+2018-08-24 09:55:43,732 INFO (WebLogAspect.java:70)- SPEND TIME : 16
+2018-08-24 09:58:17,862 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-08-24 09:58:34,272 INFO (EventConfig.java:25)- 订单创建，待支付
+2018-08-24 09:58:34,300 INFO (EventConfig.java:35)- 用户完成支付，待收货: start
+2018-08-24 09:58:34,301 INFO (EventConfig.java:30)- 用户完成支付，待收货
+2018-08-24 09:58:34,313 INFO (EventConfig.java:40)- 用户完成支付，待收货: end
+2018-08-24 09:58:34,315 INFO (EventConfig.java:45)- 用户已收货，订单完成
+2018-08-24 09:58:34,322 INFO (StartupInfoLogger.java:57)- Started ZipkinConsumerApplication in 21.596 seconds (JVM running for 23.141)
+2018-08-24 09:59:35,411 INFO (WebLogAspect.java:47)- URL : http://192.168.137.1:9002/users/
+2018-08-24 09:59:35,421 INFO (WebLogAspect.java:48)- HTTP_METHOD : GET
+2018-08-24 09:59:35,421 INFO (WebLogAspect.java:49)- IP : 192.168.137.1
+2018-08-24 09:59:35,422 INFO (WebLogAspect.java:50)- CLASS_METHOD : xyz.wongs.web.UserController.getUserList
+2018-08-24 09:59:35,423 INFO (WebLogAspect.java:51)- ARGS : []
+2018-08-24 09:59:35,504 INFO (WebLogAspect.java:69)- RESPONSE : [xyz.wongs.domain.User@21856032, xyz.wongs.domain.User@3c3da18d, xyz.wongs.domain.User@5de548c6, xyz.wongs.domain.User@3b8b8de1, xyz.wongs.domain.User@7c2ffc0, xyz.wongs.domain.User@5622177c, xyz.wongs.domain.User@21f6c606, xyz.wongs.domain.User@4675a35c]
+2018-08-24 09:59:35,505 INFO (WebLogAspect.java:70)- SPEND TIME : 94
+2018-08-24 09:59:39,472 INFO (WebLogAspect.java:47)- URL : http://192.168.137.1:9002/users/
+2018-08-24 09:59:39,475 INFO (WebLogAspect.java:48)- HTTP_METHOD : GET
+2018-08-24 09:59:39,478 INFO (WebLogAspect.java:49)- IP : 192.168.137.1
+2018-08-24 09:59:39,478 INFO (WebLogAspect.java:50)- CLASS_METHOD : xyz.wongs.web.UserController.getUserList
+2018-08-24 09:59:39,478 INFO (WebLogAspect.java:51)- ARGS : []
+2018-08-24 09:59:39,484 INFO (WebLogAspect.java:69)- RESPONSE : [xyz.wongs.domain.User@752904cf, xyz.wongs.domain.User@5979de6f, xyz.wongs.domain.User@3f15e5da, xyz.wongs.domain.User@dc1e482, xyz.wongs.domain.User@30739689, xyz.wongs.domain.User@276eac4e, xyz.wongs.domain.User@35a2b1d2, xyz.wongs.domain.User@1949ae31]
+2018-08-24 09:59:39,486 INFO (WebLogAspect.java:70)- SPEND TIME : 15
+2018-08-24 10:03:08,530 INFO (WebLogAspect.java:47)- URL : http://192.168.137.1:9002/users/
+2018-08-24 10:03:08,533 INFO (WebLogAspect.java:48)- HTTP_METHOD : GET
+2018-08-24 10:03:08,533 INFO (WebLogAspect.java:49)- IP : 192.168.137.1
+2018-08-24 10:03:08,536 INFO (WebLogAspect.java:50)- CLASS_METHOD : xyz.wongs.web.UserController.getUserList
+2018-08-24 10:03:08,536 INFO (WebLogAspect.java:51)- ARGS : []
+2018-08-24 10:03:08,542 INFO (WebLogAspect.java:69)- RESPONSE : [xyz.wongs.domain.User@5236dabf, xyz.wongs.domain.User@51b1310b, xyz.wongs.domain.User@4f2d7c8a, xyz.wongs.domain.User@10b70fd9, xyz.wongs.domain.User@74b0dc52, xyz.wongs.domain.User@2c5182a6, xyz.wongs.domain.User@8bc728a, xyz.wongs.domain.User@205d6d83]
+2018-08-24 10:03:08,542 INFO (WebLogAspect.java:70)- SPEND TIME : 12
+2018-08-24 10:05:05,362 INFO (WebLogAspect.java:47)- URL : http://192.168.137.1:9002/users/
+2018-08-24 10:05:05,365 INFO (WebLogAspect.java:48)- HTTP_METHOD : GET
+2018-08-24 10:05:05,368 INFO (WebLogAspect.java:49)- IP : 192.168.137.1
+2018-08-24 10:05:05,369 INFO (WebLogAspect.java:50)- CLASS_METHOD : xyz.wongs.web.UserController.getUserList
+2018-08-24 10:05:05,372 INFO (WebLogAspect.java:51)- ARGS : []
+2018-08-24 10:05:05,381 INFO (WebLogAspect.java:69)- RESPONSE : [xyz.wongs.domain.User@67599930, xyz.wongs.domain.User@268cb993, xyz.wongs.domain.User@5388ca1c, xyz.wongs.domain.User@453e61ea, xyz.wongs.domain.User@6e85f064, xyz.wongs.domain.User@2d868c06, xyz.wongs.domain.User@38cb6b80, xyz.wongs.domain.User@ecc6c42]
+2018-08-24 10:05:05,381 INFO (WebLogAspect.java:70)- SPEND TIME : 19
+2018-08-24 10:06:14,881 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-08-24 10:06:31,024 INFO (EventConfig.java:25)- 订单创建，待支付
+2018-08-24 10:06:31,052 INFO (EventConfig.java:35)- 用户完成支付，待收货: start
+2018-08-24 10:06:31,053 INFO (EventConfig.java:30)- 用户完成支付，待收货
+2018-08-24 10:06:31,059 INFO (EventConfig.java:40)- 用户完成支付，待收货: end
+2018-08-24 10:06:31,061 INFO (EventConfig.java:45)- 用户已收货，订单完成
+2018-08-24 10:06:31,064 INFO (StartupInfoLogger.java:57)- Started ZipkinConsumerApplication in 20.544 seconds (JVM running for 22.442)
+2018-08-24 10:06:44,513 INFO (WebLogAspect.java:47)- URL : http://192.168.137.1:9002/users/
+2018-08-24 10:06:44,520 INFO (WebLogAspect.java:48)- HTTP_METHOD : GET
+2018-08-24 10:06:44,520 INFO (WebLogAspect.java:49)- IP : 192.168.137.1
+2018-08-24 10:06:44,521 INFO (WebLogAspect.java:50)- CLASS_METHOD : xyz.wongs.web.UserController.getUserList
+2018-08-24 10:06:44,522 INFO (WebLogAspect.java:51)- ARGS : []
+2018-08-24 10:06:44,607 INFO (WebLogAspect.java:69)- RESPONSE : [xyz.wongs.domain.User@80c980c, xyz.wongs.domain.User@71a8daea, xyz.wongs.domain.User@64edd41a, xyz.wongs.domain.User@37a0d4ef, xyz.wongs.domain.User@52d486d7, xyz.wongs.domain.User@659c69ed, xyz.wongs.domain.User@6f5b3c40, xyz.wongs.domain.User@5eed9ae8]
+2018-08-24 10:06:44,608 INFO (WebLogAspect.java:70)- SPEND TIME : 95
+2018-08-24 10:06:47,671 INFO (WebLogAspect.java:47)- URL : http://192.168.137.1:9002/users/
+2018-08-24 10:06:47,675 INFO (WebLogAspect.java:48)- HTTP_METHOD : GET
+2018-08-24 10:06:47,679 INFO (WebLogAspect.java:49)- IP : 192.168.137.1
+2018-08-24 10:06:47,680 INFO (WebLogAspect.java:50)- CLASS_METHOD : xyz.wongs.web.UserController.getUserList
+2018-08-24 10:06:47,680 INFO (WebLogAspect.java:51)- ARGS : []
+2018-08-24 10:06:47,685 INFO (WebLogAspect.java:69)- RESPONSE : [xyz.wongs.domain.User@5ccd2e53, xyz.wongs.domain.User@13c87aef, xyz.wongs.domain.User@479ee907, xyz.wongs.domain.User@72c30737, xyz.wongs.domain.User@47c9008a, xyz.wongs.domain.User@1786059e, xyz.wongs.domain.User@4df041dc, xyz.wongs.domain.User@42b2c5b8]
+2018-08-24 10:06:47,688 INFO (WebLogAspect.java:70)- SPEND TIME : 17
+2018-08-24 10:06:51,718 INFO (WebLogAspect.java:47)- URL : http://192.168.137.1:9002/users/2
+2018-08-24 10:06:51,734 INFO (WebLogAspect.java:48)- HTTP_METHOD : GET
+2018-08-24 10:06:51,734 INFO (WebLogAspect.java:49)- IP : 192.168.137.1
+2018-08-24 10:06:51,737 INFO (WebLogAspect.java:50)- CLASS_METHOD : xyz.wongs.web.UserController.getUser
+2018-08-24 10:06:51,738 INFO (WebLogAspect.java:51)- ARGS : [2]
+2018-08-24 10:06:51,751 INFO (WebLogAspect.java:69)- RESPONSE : xyz.wongs.domain.User@3ab8f314
+2018-08-24 10:06:51,751 INFO (WebLogAspect.java:70)- SPEND TIME : 33
+2018-08-24 10:07:52,527 INFO (WebLogAspect.java:47)- URL : http://192.168.137.1:9002/users/4
+2018-08-24 10:07:52,533 INFO (WebLogAspect.java:48)- HTTP_METHOD : GET
+2018-08-24 10:07:52,545 INFO (WebLogAspect.java:49)- IP : 192.168.137.1
+2018-08-24 10:07:52,545 INFO (WebLogAspect.java:50)- CLASS_METHOD : xyz.wongs.web.UserController.getUser
+2018-08-24 10:07:52,550 INFO (WebLogAspect.java:51)- ARGS : [4]
+2018-08-24 10:07:52,558 INFO (WebLogAspect.java:69)- RESPONSE : xyz.wongs.domain.User@443c2f7f
+2018-08-24 10:07:52,558 INFO (WebLogAspect.java:70)- SPEND TIME : 31
+2018-08-24 10:13:07,035 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-08-24 10:13:21,669 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-08-24 10:13:58,474 INFO (EventConfig.java:25)- 订单创建，待支付
+2018-08-24 10:13:58,531 INFO (EventConfig.java:35)- 用户完成支付，待收货: start
+2018-08-24 10:13:58,532 INFO (EventConfig.java:30)- 用户完成支付，待收货
+2018-08-24 10:13:58,537 INFO (EventConfig.java:40)- 用户完成支付，待收货: end
+2018-08-24 10:13:58,544 INFO (EventConfig.java:45)- 用户已收货，订单完成
+2018-08-24 10:13:58,548 INFO (StartupInfoLogger.java:57)- Started ZipkinConsumerApplication in 57.474 seconds (JVM running for 59.196)
+2018-08-24 10:13:59,293 INFO (StartupInfoLogger.java:57)- Started ZipkinProviderApplication in 44.365 seconds (JVM running for 46.988)
+2018-08-24 10:14:11,143 INFO (WebLogAspect.java:47)- URL : http://192.168.137.1:9002/users/4
+2018-08-24 10:14:11,149 INFO (WebLogAspect.java:48)- HTTP_METHOD : GET
+2018-08-24 10:14:11,149 INFO (WebLogAspect.java:49)- IP : 192.168.137.1
+2018-08-24 10:14:11,151 INFO (WebLogAspect.java:50)- CLASS_METHOD : xyz.wongs.web.UserController.getUser
+2018-08-24 10:14:11,151 INFO (WebLogAspect.java:51)- ARGS : [4]
+2018-08-24 10:14:11,225 INFO (WebLogAspect.java:69)- RESPONSE : xyz.wongs.domain.User@462df8e4
+2018-08-24 10:14:11,225 INFO (WebLogAspect.java:70)- SPEND TIME : 82
+2018-08-24 10:14:14,059 INFO (WebLogAspect.java:47)- URL : http://192.168.137.1:9002/users/5
+2018-08-24 10:14:14,063 INFO (WebLogAspect.java:48)- HTTP_METHOD : GET
+2018-08-24 10:14:14,066 INFO (WebLogAspect.java:49)- IP : 192.168.137.1
+2018-08-24 10:14:14,067 INFO (WebLogAspect.java:50)- CLASS_METHOD : xyz.wongs.web.UserController.getUser
+2018-08-24 10:14:14,067 INFO (WebLogAspect.java:51)- ARGS : [5]
+2018-08-24 10:14:14,071 INFO (WebLogAspect.java:69)- RESPONSE : xyz.wongs.domain.User@64add564
+2018-08-24 10:14:14,074 INFO (WebLogAspect.java:70)- SPEND TIME : 15

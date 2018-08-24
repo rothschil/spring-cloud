@@ -17,6 +17,7 @@
         <module>ms-4-zuul</module>
         <module>ms-5-config</module>
         <module>ms-6-bus</module>
+        <module>ms-7-sleuth</module>
     </modules>
     <packaging>pom</packaging>
     <name>spring-cloud</name>

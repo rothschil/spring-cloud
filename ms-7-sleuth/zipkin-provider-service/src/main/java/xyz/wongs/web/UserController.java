@@ -1,15 +1,13 @@
 package xyz.wongs.web;
 
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.client.RestTemplate;
 import xyz.wongs.domain.User;
+import xyz.wongs.domain.UserRepository;
+
+import java.util.List;
 
 /**
  * @author WCNGS@QQ.CO
@@ -22,22 +20,29 @@ import xyz.wongs.domain.User;
 @RequestMapping(value = "/users")
 @RestController
 public class UserController {
-    private Logger log = LoggerFactory.getLogger(UserController.class);
-
-    private String url = "http://PROVIDER-SERVICE/users/";
 
     @Autowired
-    public RestTemplate restTemplate;
+    private UserRepository userRepository;
 
+    /**
+     * 方法实现说明
+     *
+     * @param
+     * @return java.util.List<xyz.wongs.domain.User>
+     * @throws
+     * @method getUserList
+     * @author WCNGS@QQ.COM
+     * @version
+     * @date 2018/6/21 8:53
+     * @see
+     */
     @ApiOperation(value = "获取用户列表", notes = "获取全部用户信息")
     @RequestMapping(value = "/", method = RequestMethod.GET)
-    @HystrixCommand(fallbackMethod = "getUserListError")
-    public String getUserList() {
-        return restTemplate.getForEntity(url, String.class).getBody();
-    }
+    public List<User> getUserList() {
 
-    public String getUserListError() {
-        return "error";
+        // 处理"/users/"的GET请求，用来获取用户列表
+        List<User> users = userRepository.findAll();
+        return users;
     }
 
     /**
@@ -55,15 +60,11 @@ public class UserController {
     @ApiOperation(value = "新增用户", notes = "新增基本用户")
     @ApiImplicitParam(name = "user", value = "用户详细实体user", required = true, dataType = "User")
     @RequestMapping(value = "/", method = RequestMethod.POST)
-    @HystrixCommand(fallbackMethod = "postUserError")
     public String postUser(@ModelAttribute User user) {
-        restTemplate.postForEntity(url, user, User.class);
+        // 处理"/users/"的POST请求，用来创建User
+        // 除了@ModelAttribute绑定参数之外，还可以通过@RequestParam从页面中传递参数
+        userRepository.save(user);
         return "success";
-    }
-
-    public String postUserError(User user) {
-
-        return user.toString();
     }
 
     /**
@@ -78,21 +79,12 @@ public class UserController {
      * @date 2018/6/21 8:55
      * @see
      */
-    @HystrixCommand(fallbackMethod = "getUserFallback",
-            commandProperties = {@HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "1000"),
-                    @HystrixProperty(name = "execution.timeout.enabled", value = "true"),
-                    @HystrixProperty(name="execution.isolation.strategy",value = "THREAD")}
-                    )
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public User getUser(@PathVariable Long id) {
-        log.error(" Request: user id is "+ id);
-        return restTemplate.getForObject(url+id, User.class);
-    }
 
-    public User getUserFallback(Long id) {
-        User user = new User("",0);
-        user.setId(0L);
-        return user;
+        // 处理"/users/{id}"的GET请求，用来获取url中id值的User信息
+        // url中的id可通过@PathVariable绑定到函数的参数中
+        return userRepository.findOne(id);
     }
 
     /**
@@ -108,23 +100,17 @@ public class UserController {
      * @date 2018/6/21 8:55
      * @see
      */
-    @HystrixCommand(fallbackMethod = "putUserFallback",
-            commandProperties = {@HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "5000"),
-                    @HystrixProperty(name = "execution.timeout.enabled", value = "false")})
     @RequestMapping(value = "/{id}", method = RequestMethod.PUT)
     public String putUser(@PathVariable Long id, @ModelAttribute User user) {
 
-        User u = restTemplate.getForObject(url + id, User.class);
+        // 处理"/users/{id}"的PUT请求，用来更新User信息
+        User u = userRepository.findOne(id);
         u.setName(user.getName());
         u.setAge(user.getAge());
-        restTemplate.postForEntity(url, u, User.class);
+        userRepository.saveAndFlush(u);
         return "success";
     }
 
-    public String putUserFallback(Long id) {
-        String fail="暂时不能提供服务";
-        return fail;
-    }
 
     /**
      * 方法实现说明
@@ -138,17 +124,18 @@ public class UserController {
      * @date 2018/6/21 8:56
      * @see
      */
-    @HystrixCommand(fallbackMethod = "userFallback")
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
     public String deleteUser(@PathVariable Long id) {
-        restTemplate.delete(url, id);
+        // 处理"/users/{id}"的DELETE请求，用来删除User
+        userRepository.delete(id);
         return "success";
     }
 
-
-    public String userFallback(Long id) {
-        String fail="暂时不能提供服务";
-        return fail;
+    @RequestMapping(value = "/list-all", method = RequestMethod.GET)
+    public void initDatas() {
+        User user = new User("李四", 20);
+        userRepository.saveAndFlush(user);
+        user = new User("王五", 87);
+        userRepository.saveAndFlush(user);
     }
-
 }

@@ -18,15 +18,12 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootApplication
 @EnableDiscoveryClient
 public class RibbonConsumerServiceApplication {
-
     public static void main(String[] args) {
         SpringApplication.run(RibbonConsumerServiceApplication.class, args);
     }
-
     @Bean
     @LoadBalanced
     RestTemplate  restTemplate(){
          return new RestTemplate();
     }
-
 }

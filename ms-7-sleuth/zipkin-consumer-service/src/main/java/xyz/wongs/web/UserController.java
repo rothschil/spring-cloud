@@ -24,7 +24,7 @@ import xyz.wongs.domain.User;
 public class UserController {
     private Logger log = LoggerFactory.getLogger(UserController.class);
 
-    private String url = "http://PROVIDER-SERVICE/users/";
+    private String url = "http://provider-service/users/";
 
     @Autowired
     public RestTemplate restTemplate;

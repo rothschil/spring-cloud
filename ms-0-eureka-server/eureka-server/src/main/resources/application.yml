@@ -1,5 +1,6 @@
 server:
   port: 8761              #指定应用端口
+
 spring:
   application:
     name: eureka-server   #指定应用端口

@@ -2,10 +2,8 @@ package xyz.wongs;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.netflix.feign.EnableFeignClients;
-import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
  * @author WCNGS@QQ.CO
@@ -17,11 +15,16 @@ import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboar
  **/
 @EnableDiscoveryClient
 @SpringBootApplication
-@EnableFeignClients
-@EnableHystrixDashboard
-@EnableCircuitBreaker
-public class HystrixConsumerFeignApplication {
+@EnableSwagger2
+public class ZipkinProApplication {
+
     public static void main(String[] args) {
-        SpringApplication.run(HystrixConsumerFeignApplication.class, args);
+        SpringApplication.run(ZipkinProApplication.class, args);
     }
+
+//    @Bean
+//    public AlwaysSampler defaultSampler(){
+//        return new AlwaysSampler();
+//    }
+
 }
