@@ -116,33 +116,33 @@ public class BaseRepositoryImpl<T, ID extends Serializable> extends SimpleJpaRep
 //		  return super.findAll(spec,pageable);
 //	}
 
-	public Page<T> find3(Class rootCls,int pageNo, int pageSize){
-		CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
-		//调用criteriaBuilder.createQuery来创建CriteriaQuery。其中createQuery的参数是Query返回值类型
-		CriteriaQuery criteriaQuery = criteriaBuilder.createQuery();
-		//调用criteriaQuery.from(Order.class)。参数是对应于order表的实体类，query.from
-		// 类似于sql中的from语句，该方法的执行等价于sql中的from order。
-		Root root = criteriaQuery.from(rootCls);
-		//调用 query.select创建映射。 query.select(criteriaBuilder.count(root.get(“id”)))
-		// 等价于select count(id)。如果执行query.select(root)则等价于select *。
-		criteriaQuery.select(root);
-
-		//查询条件
-		List<Predicate> predicates = new ArrayList<Predicate>();
-		//将Predicate放在 query.where中
-		criteriaQuery.where(predicates.toArray(new Predicate[predicates.size()]));
-		entityManager.createQuery(criteriaQuery) ;
-		Sort sort = new Sort(Sort.Direction.DESC, "id");
-		Pageable pageable = new PageRequest(pageNo, pageSize, sort);
-
-		List<Long> totals = entityManager.createQuery(criteriaQuery).getResultList();
-		Long total = 0L;
-		for (Long element : totals) {
-			total += element == null ? 0 : element;
-		}
-
-		return null;
-	}
+//	public Page<T> find3(Class rootCls,int pageNo, int pageSize){
+//		CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
+//		//调用criteriaBuilder.createQuery来创建CriteriaQuery。其中createQuery的参数是Query返回值类型
+//		CriteriaQuery criteriaQuery = criteriaBuilder.createQuery();
+//		//调用criteriaQuery.from(Order.class)。参数是对应于order表的实体类，query.from
+//		// 类似于sql中的from语句，该方法的执行等价于sql中的from order。
+//		Root root = criteriaQuery.from(rootCls);
+//		//调用 query.select创建映射。 query.select(criteriaBuilder.count(root.get(“id”)))
+//		// 等价于select count(id)。如果执行query.select(root)则等价于select *。
+//		criteriaQuery.select(root);
+//
+//		//查询条件
+//		List<Predicate> predicates = new ArrayList<Predicate>();
+//		//将Predicate放在 query.where中
+//		criteriaQuery.where(predicates.toArray(new Predicate[predicates.size()]));
+//		entityManager.createQuery(criteriaQuery) ;
+//		Sort sort = new Sort(Sort.Direction.DESC, "id");
+//		Pageable pageable = new PageRequest(pageNo, pageSize, sort);
+//
+//		List<Long> totals = entityManager.createQuery(criteriaQuery).getResultList();
+//		Long total = 0L;
+//		for (Long element : totals) {
+//			total += element == null ? 0 : element;
+//		}
+//
+//		return null;
+//	}
 
 
 

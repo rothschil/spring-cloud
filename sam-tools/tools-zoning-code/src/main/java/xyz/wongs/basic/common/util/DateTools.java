@@ -213,10 +213,11 @@ public class DateTools {
 		else {
 			double y = Double.parseDouble(kk[0]) + Double.parseDouble(kk[1]) / 60;
 			double u = Double.parseDouble(jj[0]) + Double.parseDouble(jj[1]) / 60;
-			if ((y - u) > 0)
+			if ((y - u) > 0) {
 				return y - u + "";
-			else
+			} else {
 				return "0";
+			}
 		}
 	}
 
@@ -520,14 +521,16 @@ public class DateTools {
 
 	/**
 	 *
-	 * @param args
+	 * @param date
 	 */
 	public static boolean RightDate(String date) {
 
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
-		;
-		if (date == null)
+		if (date == null) {
 			return false;
+		}
+		String YYYY_MM_DD_HH_MI_SS="yyyy-MM-dd hh:mm:ss";
+		SimpleDateFormat sdf = new SimpleDateFormat(YYYY_MM_DD_HH_MI_SS);
+
 		if (date.length() > 10) {
 			sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
 		} else {

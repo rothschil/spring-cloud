@@ -168,7 +168,8 @@ public abstract class BaseService<T extends AbstractEntity<?>, ID extends Serial
     public Page<T> findCriteria(Integer page, Integer size,final AbstractEntity<?> ae) {
         Pageable pageable = new PageRequest(page, size);
 
-        Sort sort = new Sort(Sort.Direction.DESC, "id");
+//        Sort sort = new Sort(Sort.Direction.DESC, "id");
+
         return findAll(pageable);
     }
 
