@@ -1,0 +1,10 @@
+server:
+  port: 9002
+spring:
+  application:
+    name: consumer-service
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
