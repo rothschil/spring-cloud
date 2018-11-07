@@ -3,27 +3,25 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>spring-cloud</artifactId>
+        <artifactId>ms-99-snails</artifactId>
         <groupId>xyz.wongs</groupId>
         <version>1.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>snails-core</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>tools-zoning-code</module>
-        <module>clean-name</module>
+        <module>core-zone</module>
     </modules>
-    <artifactId>sam-tools</artifactId>
-    <name>sam-tools</name>
 
-    <properties>
-        <commons-lang3.version>3.1</commons-lang3.version>
-        <common-collections4.version>4.0</common-collections4.version>
-        <commons-io.version>2.5</commons-io.version>
-    </properties>
-
-    <dependencies>
-
-
-    </dependencies>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>xyz.wongs</groupId>
+                <artifactId>common-abstract</artifactId>
+                <version>1.0</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 </project>

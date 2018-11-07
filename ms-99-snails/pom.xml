@@ -8,13 +8,9 @@
         <version>1.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>ms-99-snails</artifactId>
     <packaging>pom</packaging>
-    <modules>
-        <module>tools-zoning-code</module>
-        <module>clean-name</module>
-    </modules>
-    <artifactId>sam-tools</artifactId>
-    <name>sam-tools</name>
 
     <properties>
         <commons-lang3.version>3.1</commons-lang3.version>
@@ -22,8 +18,10 @@
         <commons-io.version>2.5</commons-io.version>
     </properties>
 
-    <dependencies>
+    <modules>
+        <module>snails-common</module>
+        <module>snails-core</module>
+    </modules>
 
 
-    </dependencies>
 </project>
