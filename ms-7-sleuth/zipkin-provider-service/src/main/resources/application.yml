@@ -2,7 +2,7 @@ server:
   port: 9002
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/springboot
+    url: jdbc:mysql://192.168.247.129:3306/springboot
     username: root
     password: 123456
     driver-class-name: com.mysql.jdbc.Driver
