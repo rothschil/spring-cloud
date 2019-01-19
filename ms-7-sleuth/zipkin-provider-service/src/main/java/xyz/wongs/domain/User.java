@@ -1,9 +1,12 @@
 package xyz.wongs.domain;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import com.auth0.jwt.JWT;
+import com.auth0.jwt.algorithms.Algorithm;
+import com.sun.xml.internal.bind.v2.model.core.ID;
+import org.hibernate.annotations.Proxy;
+import org.springframework.data.domain.Persistable;
+
+import javax.persistence.*;
 
 /**
  * @author WCNGS@QQ.CO
@@ -13,7 +16,9 @@ import javax.persistence.Id;
  * @Description: TODO
  * @date 2018/6/20 16:35
  **/
+//@Proxy(lazy = false)
 @Entity
+@Table(name ="TB_USER")
 public class User {
 
     @Id
@@ -56,4 +61,5 @@ public class User {
     public void setAge(Integer age) {
         this.age = age;
     }
+
 }

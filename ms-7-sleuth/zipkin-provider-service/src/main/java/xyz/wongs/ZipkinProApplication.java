@@ -1,8 +1,12 @@
 package xyz.wongs;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+//import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.context.annotation.Bean;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
@@ -13,7 +17,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  * @Description: TODO
  * @date 2018/6/22 11:06
  **/
-@EnableDiscoveryClient
+//@EnableDiscoveryClient
 @SpringBootApplication
 @EnableSwagger2
 public class ZipkinProApplication {
@@ -26,5 +30,10 @@ public class ZipkinProApplication {
 //    public AlwaysSampler defaultSampler(){
 //        return new AlwaysSampler();
 //    }
+
+    @Bean
+    public ObjectMapper objectMapper() {
+        return new ObjectMapper().disable(SerializationFeature.FAIL_ON_EMPTY_BEANS);
+    }
 
 }

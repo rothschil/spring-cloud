@@ -1,11 +1,16 @@
 package xyz.wongs.web;
 
+import com.alibaba.fastjson.JSONObject;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import xyz.wongs.domain.User;
 import xyz.wongs.domain.UserRepository;
+import xyz.wongs.jwt.interf.PassToken;
+import xyz.wongs.jwt.interf.UserLoginToken;
+import xyz.wongs.service.TokenService;
 
 import java.util.List;
 
@@ -17,12 +22,40 @@ import java.util.List;
  * @Description: TODO
  * @date 2018/6/21 8:49
  **/
+@Api(description="",value="user")
 @RequestMapping(value = "/users")
 @RestController
 public class UserController {
 
     @Autowired
     private UserRepository userRepository;
+
+    @Autowired
+    private TokenService tokenService;
+
+
+    @ApiOperation(value = "登陆用户", notes = "登陆用户")
+    @ApiImplicitParam(name = "user", value = "用户详细实体user", required = true, dataType = "User")
+    @PassToken
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    public Object login(@RequestBody User user){
+        JSONObject jsonObject=new JSONObject();
+        User userForBase=userRepository.getOne(user.getId());
+        if(userForBase==null){
+            jsonObject.put("message","登录失败,用户不存在");
+            return jsonObject;
+        }else {
+            if (!userForBase.getName().equals(user.getName())){
+                jsonObject.put("message","登录失败,密码错误");
+                return jsonObject;
+            }else {
+                String token = tokenService.getToken(userForBase);
+                jsonObject.put("token", token);
+                jsonObject.put("user", userForBase);
+                return jsonObject;
+            }
+        }
+    }
 
     /**
      * 方法实现说明
@@ -43,6 +76,12 @@ public class UserController {
         // 处理"/users/"的GET请求，用来获取用户列表
         List<User> users = userRepository.findAll();
         return users;
+    }
+
+    @UserLoginToken
+    @GetMapping("/getMessage")
+    public String getMessage(){
+        return "你已通过验证";
     }
 
     /**
